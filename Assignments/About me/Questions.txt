@@ -1,0 +1,15 @@
+    QUESTIONS:
+
+1. Inline CSS style overrides external stylesheets because they are "closer" to the element. 
+Since they are in the same documents which the style-changes takes place.
+
+2. An id is used for elements that only appear once on your website (such as the header, footer, banner, etc). 
+While class is used for elements that appear multiple times on your page (such as paragraphs, headings, links, etc). Class is also more specific than ID tag
+
+3. RGBA means "Red-green-blue-alpha". It can express all the colours as RGB can, but the alpha channel allows for control over the opacity of the colour.
+
+4. CSS files are put in the head rather than the body for several reasons, one is that its a common practise and expected to be there. 
+Another is that CSS is styling of the page, not content of it, so it shouldn't be in the body. 
+And putting CSS files in the header makes it download quicker, and then you reduce the risk of losing the CSS on the page.
+
+5. The CSS selector p.article would only style the paragraph elements in the article tag.
