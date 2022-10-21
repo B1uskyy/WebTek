@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tax form</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Superhero Tax form:</h1>
+    <form
+      action="https://folk.ntnu.no/anderobs/webtek/receive_form.php"
+      method="post"
+      class="form"
+    >
+      <label for="name">Real name:</label>
+      <input type="text" name="name" id="name" pattern="[A-Za-z\s]*" />
+
+      <br />
+      <br />
+      <label for="gender"> Gender </label>
+      <br />
+
+      <select name="gender" id="gender">
+        <option value="male">Male</option>
+        <option value="femal">Female</option>
+      </select>
+      <br />
+      <br />
+      <label for="email">E-mail:</label>
+
+      <input type="email" name="email" id="email" />
+      <br /><br />
+      <label for="birthdate">
+        Birthdate:
+        <input type="date" name="birthdate" max="1998-12-31" />
+      </label>
+
+      <br />
+      <br />
+      <label for="hero"
+        >Hero name:
+        <input type="text" name="hero" />
+      </label>
+      <br />
+      <br />
+      <label for="spandex">
+        Do you wear spandex?
+        <br />
+        <input type="checkbox" name="spandex" />
+      </label>
+      <br />
+      <br />
+      <label for="strength"
+        >Strength:
+        <input type="number" name="strength" min="1" max="10" />
+      </label>
+      <br />
+      <br />
+      <label for="speed"
+        >Speed:
+        <input type="number" name="speed" min="1" max="10" />
+      </label>
+      <br />
+      <br />
+      <label for="intelligence">
+        Intelligence:
+        <input type="number" name="intelligence" min="1" max="10" />
+      </label>
+      <br />
+      <br />
+      <label for="income">
+        Income
+        <input type="number" name="income" min="0" id="income" required />
+      </label>
+      <br />
+      <br />
+      <label for="wealth">
+        Wealth
+        <input type="number" name="wealth" min="0" required id="wealth" />
+      </label>
+      <br />
+      <br />
+      <label for="tax">
+        Tax <input type="number" name="tax" id="tax" disabled />
+      </label>
+
+      <br />
+      <br />
+      <button id="submit">Submit tax form</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+Questions:
+
+1. Phones will ignore auto-play on videos to save battery and prevent performance issues, it can also help preserve bandwidth.
+
+2. The CSS will not affect the user as their resolution is out of the set limits for the code.
+
+3. One advantage is that administrating and maintaining one website is easier than having multiple versions. Another advantage is that you don't have to redo a lot of your code over several versions. It also improves user experience and makes it easier to share content.

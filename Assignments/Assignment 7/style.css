@@ -1,0 +1,18 @@
+ul {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+
+ß
+
+/* check.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+
+/* ul li.checked::before {
+    text-decoration: none;
+} * */

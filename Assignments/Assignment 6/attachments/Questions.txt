@@ -1,0 +1,19 @@
+Questions:
+
+
+1. 
+Due to rounding errors in Javascript, the equation wont be precicely presented, and as a result the "===" wil return false.
+
+2. 
+The method attribute deciedes which HTTP method to use to submit the form (GET or POST)
+
+3. 
+The form information will appear in the URL with get method because GET will store the data within the URL, as opposed to POST
+which will store it within the HTTP request.
+
+4. 
+Because we need to validate both client- and server-side, so by only using HTML5 and/or Javascript you miss out on a lot of
+secutity validation. 
+
+5.
+Input is for one-line fields of text. While textarea is for multi-line text inputs, such as a comment or feedback. This 

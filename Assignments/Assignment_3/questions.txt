@@ -1,0 +1,5 @@
+Questions:
+1. The difference between the absolute and fixed position is that when an element is positioned absolute, it will stay in the same position, but you can scroll down and it will disappear. As it is bound to another box.
+While fixed position, the element will stay the same place on the screen. But follow when scrolling down on the page. The element will stay where it is.
+
+2. If we want to access the third element within another element, we can use the nth-child() pseudo-selector where we can write the desired child of another element that we would like to change. So in this example, we could write nth-child(3).
