@@ -1,7 +1,8 @@
 let inputValue = document.getElementById('add_task');
 let ul = document.querySelector('ul');
 let button = document.querySelector('button');
-let output = document.getElementById('output');
+const output = document.querySelector('#output');
+const completed = document.querySelector('#completed');
 
 const todo_liste = [];
 
@@ -35,13 +36,39 @@ function addTask(e) {
     liste.prepend(check)
 
 
-    todo_liste.push(today)
+    
     console.log(todo_liste);
     
     // clears the input field after the user has clicked the button
     inputValue.value = "";
-   
 
+
+    function totalTask() {
+        output.innerHTML = todo_liste.length; 
+    }
+
+   
+    totalTask()
+
+
+    function completedTask () {
+        counter = 0
+        completed.innerHTML = counter;
+
+        check.addEventListener('click', function() { {
+            if (check.checked) {
+                counter += 1;
+                completed.innerHTML = (`${counter} / ${todo_liste.length}`);
+            } else if (check.checked === false) {
+                counter -= 1;
+                completed.innerHTML = (`${counter} / ${todo_liste.length}`);
+            }
+
+        }
+    
+    })
+    }
+    completedTask()
    
     function line_through() {
         if (check.checked == true) {
@@ -53,14 +80,16 @@ function addTask(e) {
 
      check.addEventListener('click', line_through);
 
-    
+     button.addEventListener('click', console.log(today))
 
     e.preventDefault();
 }
 
 
 
+
 button.addEventListener('click', addTask);
+
 
 
 
