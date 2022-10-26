@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+<table id="books" cellpadding = '10px' style: 'text-align-toleft'>
+    <thead>
+        <tr>
+            <th> Author</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+<tbody>
+
+
+
+</tbody>
+
+</table>
+
+  </body>
+
+
+  <script>
+
+
+// Read from XML file
+
+// let xmlContent = '';
+// let tableBooks = document.getElementById('books')
+
+// fetch('books.xml').then(response => {
+//     response.text().then((xml) => { 
+//         xmlContent = xml;
+//         let parser = new DOmParser();
+//         let xmlDom = parser.parser().parseFromString(xmlContent, 'application/xml');
+        
+//         let books = xmlDOM.querySelectorAll('book');
+//         books.forEach(bookXmlnode => {
+//             let row = document.createElement('tr');
+            
+//             // author
+//             let td = document.createElement('tr');
+//             td.innerText = bookXmlNode.children[0]
+//             row.append(td)
+            
+
+//             //title
+//             td = document.createElement('tr');
+//             td.innerText = bookXmlNode.children[1]
+//             row.append(td)
+
+
+//             // price
+//             td = document.createElement('tr');
+//             td.innerText = bookXmlNode.children[3]
+//             row.append(td)
+
+
+//             // description
+//             td = document.createElement('tr');
+//             td.innerText = bookXmlNode.children[5]
+//             row.append(td)
+
+//             tableBookx.children[1].appendChild(row);
+//         })
+
+//     })
+// })
+
+
+// Read JSON files
+
+let tableBooks = document.getElementById('books');
+fetch('books.json')
+.then(response => response.json())
+.then(books => { 
+    json.catalog.book.forEach ( book => {
+        let row = document.createElement('tr');
+            
+            // author
+            let td = document.createElement('tr');
+            td.innerText = book.auther
+            row.append(td)
+            
+
+            //title
+            td = document.createElement('tr');
+            td.innerText = book.title
+            row.append(td)
+
+
+            // price
+            td = document.createElement('tr');
+            td.innerText = book.price
+            row.append(td)
+
+
+            // description
+            td = document.createElement('tr');
+            td.innerText = book.description
+            row.append(td)
+
+            tableBookx.children[1].appendChild(row);
+        })
+
+    })
+
+
+
+    fetch("https://reqres.in/api/users")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  </script>
+
+
+</html>
