@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tax forms: Bar chart with lines</title>
+    <meta charset="UTF-8" />
+    <script src="taxForms.js"></script>
+  </head>
+  <body>
+    <canvas id="chart" width="700" height="550"></canvas>
+
+    <script>
+      const canvas = document.getElementById("chart");
+      const context = canvas.getContext("2d");
+
+      /* Draw a line from (fromX, fromY) to (toX, toY) */
+      function drawLine(fromX, fromY, toX, toY) {
+        context.beginPath();
+        context.moveTo(toX, toY);
+        context.lineTo(fromX, fromY);
+        context.stroke();
+      }
+
+      /* Draw a text (string) on (x, y) */
+      function drawText(text, x, y) {
+        context.fillStyle = "black";
+        context.fillText(text, x, y);
+      }
+
+      /* Draw a text and with a line to its right */
+      function drawLineWithText(text, fromX, fromY, toX, toY) {
+        drawText(text, fromX - 50, fromY + 10);
+        drawLine(fromX, fromY, toX, toY);
+      }
+
+      /* Insert your code here. */
+
+      for (let i = 1; i < 11; i++) {
+        n = 1200000 - 100000 * (i + 1);
+        drawLineWithText(n, 55, 50 * i, 550, i * 50);
+      }
+
+      function label(color, x, y, width, height) {
+        context.fillStyle = color;
+        context.fillRect(x, y, width, height);
+      }
+
+      // income
+      label("red", 580, 50, 50, 25);
+      drawText("income", 635, 65);
+
+      //wealth
+      label("blue", 580, 85, 50, 25);
+      drawText("wealth", 635, 100);
+
+      let j = 0;
+
+      for (let i = 0; i <= 3; i++) {
+        let wealth = taxForms[i].wealth;
+        let income = taxForms[i].income;
+
+        j++;
+
+        label(
+          "red",
+          150 * j - 30, // X-axis spacing with -30 to make the bars match the image
+          550 - (income / 1100000) * 550, // Y-axis calculation to get correct start-point
+          50,
+          (income / 1100000) * 550 // Height that uses canvas canvas height to get right proportion
+        );
+
+        label(
+          "blue",
+          150 * j + 25,
+          550 - (wealth / 1100000) * 550,
+          50,
+          (wealth / 1100000) * 550
+        );
+      }
+    </script>
+  </body>
+</html>

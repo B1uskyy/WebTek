@@ -1,0 +1,17 @@
+#1
+To get a 3d canvas, you would need to write let context = document.getContext("webgl")
+
+#2
+context.beginpath(); // to make "place the pen" and not draw a line from wherever the pen was before
+context.fillStyle = "blue" // set color
+context.arc(100, 100, 50, 0, 2 * MATH.pi); // makes an arc with x,y,radius, and startradious of 0 and endradius of 2*pi to get a full circle
+context.fill(); // will fill the cirle with the given color
+context.stroke(); // draws the circle
+
+#3
+
+const countries = ['Norway', 'Sweden', 'Denmark', 'New Zealand'];
+const countriesStartingWithN = countries.filter(country => countries.startsWith("N")) ; 
+
+/* This code will filter through the array, and will go thorugh each "country" element and apply the function .startsWith to see if 
+ the array item starts with the given letter */
