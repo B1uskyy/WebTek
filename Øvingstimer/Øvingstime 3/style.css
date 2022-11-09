@@ -1,0 +1,29 @@
+#video-container {
+width: 70%;
+min-width: 600px;
+margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+#invisible {
+    display: none;
+}
+
+video {
+    width: 100%; /* gjør at videoen vil følge prosentandelen følger parent stylen */
+}
+
+
+@media (max-width: 600px) {
+#video-container{
+    display: none;
+}
+#invisible {
+    display: block;
+}
+
+}
+
+

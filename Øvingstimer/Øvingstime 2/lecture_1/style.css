@@ -1,0 +1,31 @@
+body{
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #454545;
+    background-color: #fefefe;
+    text-align: justify;
+    font-size: 14pt;
+}
+
+#poster{
+width: 300px;
+float: right;
+margin-left: 20px;
+}
+
+.infobox{
+    border-style: solid;
+    max-width: 250px;
+    padding: 1em;
+}
+h1:hover {
+    color: red;
+}
+
+p:first-child {
+    color: green;
+}
+:nth-child(3) {
+    color: purple;
+}
