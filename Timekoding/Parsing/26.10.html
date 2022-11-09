@@ -33,52 +33,52 @@
 
 // Read from XML file
 
-// let xmlContent = '';
-// let tableBooks = document.getElementById('books')
+let xmlContent = '';
+let tableBooks = document.getElementById('books')
 
-// fetch('books.xml').then(response => {
-//     response.text().then((xml) => { 
-//         xmlContent = xml;
-//         let parser = new DOmParser();
-//         let xmlDom = parser.parser().parseFromString(xmlContent, 'application/xml');
+fetch('books.xml').then(response => {
+    response.text().then((xml) => { 
+        xmlContent = xml;
+        let parser = new DOmParser();
+        let xmlDom = parser.parser().parseFromString(xmlContent, 'application/xml');
         
-//         let books = xmlDOM.querySelectorAll('book');
-//         books.forEach(bookXmlnode => {
-//             let row = document.createElement('tr');
+        let books = xmlDOM.querySelectorAll('book');
+        books.forEach(bookXmlnode => {
+            let row = document.createElement('tr');
             
-//             // author
-//             let td = document.createElement('tr');
-//             td.innerText = bookXmlNode.children[0]
-//             row.append(td)
+            // author
+            let td = document.createElement('tr');
+            td.innerText = bookXmlNode.children[0]
+            row.append(td)
             
 
-//             //title
-//             td = document.createElement('tr');
-//             td.innerText = bookXmlNode.children[1]
-//             row.append(td)
+            //title
+            td = document.createElement('tr');
+            td.innerText = bookXmlNode.children[1]
+            row.append(td)
 
 
-//             // price
-//             td = document.createElement('tr');
-//             td.innerText = bookXmlNode.children[3]
-//             row.append(td)
+            // price
+            td = document.createElement('tr');
+            td.innerText = bookXmlNode.children[3]
+            row.append(td)
 
 
-//             // description
-//             td = document.createElement('tr');
-//             td.innerText = bookXmlNode.children[5]
-//             row.append(td)
+            // description
+            td = document.createElement('tr');
+            td.innerText = bookXmlNode.children[5]
+            row.append(td)
 
-//             tableBookx.children[1].appendChild(row);
-//         })
+            tableBookx.children[1].appendChild(row);
+        })
 
-//     })
-// })
+    })
+})
 
 
 // Read JSON files
 
-let tableBooks = document.getElementById('books');
+// let tableBooks = document.getElementById('books');
 fetch('books.json')
 .then(response => response.json())
 .then(books => { 
